@@ -278,6 +278,7 @@
   <ItemGroup>
     <Compile Include="ClientBundlingRegistrar.cs" />
     <Compile Include="Config\ClientBundlingSection.cs" />
+    <Compile Include="Config\BundlesCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
