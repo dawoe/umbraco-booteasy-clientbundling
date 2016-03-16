@@ -23,5 +23,22 @@
                 this["name"] = value;
             }
         }
+
+        /// <summary>
+        /// Gets or sets the path.
+        /// </summary>
+        [ConfigurationProperty("path", IsRequired = true, IsKey = false)]
+        public string Path
+        {
+            get
+            {
+                return (string)this["path"];
+            }
+
+            set
+            {
+                this["path"] = value;
+            }
+        }
     }
 }
