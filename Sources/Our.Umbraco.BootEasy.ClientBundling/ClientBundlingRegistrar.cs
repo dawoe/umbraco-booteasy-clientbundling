@@ -1,5 +1,7 @@
 ﻿namespace Our.Umbraco.BootEasy.ClientBundling
 {
+    using Our.Umbraco.BootEasy.ClientBundling.Config;
+
     /// <summary>
     /// The client bundling registrar.
     /// </summary>
@@ -21,7 +23,7 @@
         /// </summary>
         public override void Register()
         {
-            
+            var config = ClientBundlingConfig.Current;
         }
     }
 }
