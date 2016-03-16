@@ -35,6 +35,23 @@
                 return TagName;
             }
         }
+
+        /// <summary>
+        /// The this.
+        /// </summary>
+        /// <param name="key">
+        /// The key.
+        /// </param>
+        /// <returns>
+        /// The <see cref="BundleElement"/>.
+        /// </returns>
+        public new FileElement this[string key]
+        {
+            get
+            {
+                return (FileElement)this.BaseGet(key);
+            }
+        }
         
         /// <summary>
         /// Gets a value indicating whether the <see cref="T:System.Configuration.ConfigurationElementCollection"/> object is read only.
@@ -79,7 +96,7 @@
         /// <param name="element">The <see cref="T:System.Configuration.ConfigurationElement"/> to return the key for. </param>
         protected override object GetElementKey(ConfigurationElement element)
         {
-            return string.Empty;
+            return ((FileElement)element).Path;
         }
     }
 }

@@ -43,8 +43,8 @@
 
         /// <summary>
         /// Gets or sets the files.
-        /// </summary>
-        [ConfigurationProperty("files", IsRequired = true)]
+        /// </summary>       
+         [ConfigurationProperty("files", IsDefaultCollection = true)]
         public FilesCollection Files
         {
             get

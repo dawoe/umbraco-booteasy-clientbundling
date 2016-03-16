@@ -10,7 +10,7 @@
         /// <summary>
         /// Gets or sets the path.
         /// </summary>
-        [ConfigurationProperty("path", IsRequired = true, IsKey = false)]
+        [ConfigurationProperty("path", IsRequired = true, IsKey = true)]
         public string Path
         {
             get
