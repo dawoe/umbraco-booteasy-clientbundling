@@ -29,9 +29,22 @@
             this.RegisterScriptBundles();
         }
 
+        /// <summary>
+        /// Register script bundles.
+        /// </summary>
         private void RegisterScriptBundles()
         {
-           
+            foreach (BundleElement bundleConfig in ClientBundlingConfig.Current.ScriptBundles)
+            {
+                var scriptBundle = new ScriptBundle(bundleConfig.Path) { Orderer = new AsIsBundleOrderer() };
+
+                foreach (FileElement file in bundleConfig.Files)
+                {
+                    scriptBundle.Include(file.Path);
+                }
+
+                BundleTable.Bundles.Add(scriptBundle);
+            }
         }
 
         /// <summary>
