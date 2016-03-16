@@ -282,6 +282,7 @@
     <Compile Include="Config\ClientBundlingSection.cs" />
     <Compile Include="Config\BundlesCollection.cs" />
     <Compile Include="Config\FileElement.cs" />
+    <Compile Include="Config\FilesCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
