@@ -40,5 +40,22 @@
                 this["path"] = value;
             }
         }
+
+        /// <summary>
+        /// Gets or sets the files.
+        /// </summary>
+        [ConfigurationProperty("files", IsRequired = true)]
+        public FilesCollection Files
+        {
+            get
+            {
+                return (FilesCollection)base["files"];
+            }
+
+            set
+            {
+                base["files"] = value;
+            }
+        }
     }
 }
