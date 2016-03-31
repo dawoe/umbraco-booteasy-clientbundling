@@ -6,7 +6,7 @@
     /// <summary>
     /// The bundles collection config element
     /// </summary>
-    public class BundlesCollection : ConfigurationElementCollection
+    internal class BundlesCollection : ConfigurationElementCollection
     {
         /// <summary>
         /// The tag name.

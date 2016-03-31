@@ -7,7 +7,7 @@
     /// <summary>
     /// The client bundling registrar.
     /// </summary>
-    public class ClientBundlingRegistrar : BootRegistrars.ApplicationStartedBootRegistrar
+    internal class ClientBundlingRegistrar : BootRegistrars.ApplicationStartedBootRegistrar
     {
         /// <summary>
         /// Gets the sort order.

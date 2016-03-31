@@ -5,7 +5,7 @@
     /// <summary>
     /// The bundle configuration element.
     /// </summary>
-    public class BundleElement : ConfigurationElement
+    internal class BundleElement : ConfigurationElement
     {
         /// <summary>
         /// Gets or sets Name.

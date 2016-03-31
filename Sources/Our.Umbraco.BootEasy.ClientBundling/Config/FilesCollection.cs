@@ -6,7 +6,7 @@
     /// <summary>
     /// The files collection config element.
     /// </summary>
-    public class FilesCollection : ConfigurationElementCollection
+    internal class FilesCollection : ConfigurationElementCollection
     {
         /// <summary>
         /// The tag name.

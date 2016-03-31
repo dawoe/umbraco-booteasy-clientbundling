@@ -5,7 +5,7 @@
     /// <summary>
     /// The client bundling configuration section.
     /// </summary>
-    public class ClientBundlingSection : ConfigurationSection
+    internal class ClientBundlingSection : ConfigurationSection
     {
         /// <summary>
         /// Gets or sets the css bundles.

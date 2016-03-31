@@ -5,7 +5,7 @@
     /// <summary>
     /// The file configuration element
     /// </summary>
-    public class FileElement : ConfigurationElement
+    internal class FileElement : ConfigurationElement
     {
         /// <summary>
         /// Gets or sets the path.
