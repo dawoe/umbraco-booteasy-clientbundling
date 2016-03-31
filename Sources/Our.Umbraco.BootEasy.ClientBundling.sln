@@ -18,6 +18,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Packaging", "Packaging", "{
 		..\Packaging\Package.xml = ..\Packaging\Package.xml
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{CAF57096-693A-4AC8-A53E-2C2A7E0A8D01}"
+	ProjectSection(SolutionItems) = preProject
+		..\Packaging\config\BootEasyClientBundling.config = ..\Packaging\config\BootEasyClientBundling.config
+		..\Packaging\nuget-transforms\Web.config.install.xdt = ..\Packaging\nuget-transforms\Web.config.install.xdt
+		..\Packaging\nuget-transforms\Web.config.uninstall.xdt = ..\Packaging\nuget-transforms\Web.config.uninstall.xdt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,5 +38,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CAF57096-693A-4AC8-A53E-2C2A7E0A8D01} = {FF14E316-ABF6-4354-82BF-E8CCAC6ACE83}
 	EndGlobalSection
 EndGlobal
