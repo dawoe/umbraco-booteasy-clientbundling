@@ -65,8 +65,7 @@
 	<Target Name="PrepairFiles" DependsOnTargets="Compile">
 		<ItemGroup>
 			<BinFiles Include="$(CoreProjectDir)\Bin\Release\Our.Umbraco.BootEasy.ClientBundling.dll" />		
-      <Dependencies Include="$(CoreProjectDir)\Bin\Release\System.Web.Optimization.dll;$(CoreProjectDir)\Bin\Release\Microsoft.Web.Infrastructure.dll;;$(CoreProjectDir)\Bin\Release\WebGrease.dll;$(CoreProjectDir)\Bin\Release\Antlr3.Runtime.dll" />
-      
+      <Dependencies Include="$(CoreProjectDir)\Bin\Release\System.Web.Optimization.dll;$(CoreProjectDir)\Bin\Release\Microsoft.Web.Infrastructure.dll;;$(CoreProjectDir)\Bin\Release\WebGrease.dll;$(CoreProjectDir)\Bin\Release\Antlr3.Runtime.dll;$(CoreProjectDir)\Bin\Release\Microsoft.Web.XmlTransform.dll;" />      
 			<PackageFile Include="$(MSBuildProjectDirectory)\Package.xml" />
 			<NuSpecFile Include="$(MSBuildProjectDirectory)\package.nuspec" />
       <TransFroms Include="$(MSBuildProjectDirectory)\nuget-transforms\*.*" />
