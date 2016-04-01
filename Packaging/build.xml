@@ -64,18 +64,22 @@
 	<!-- PREPARE FILES -->
 	<Target Name="PrepairFiles" DependsOnTargets="Compile">
 		<ItemGroup>
-			<BinFiles Include="$(CoreProjectDir)\Bin\Release\Our.Umbraco.BootEasy.ClientBundling.dll" />			
+			<BinFiles Include="$(CoreProjectDir)\Bin\Release\Our.Umbraco.BootEasy.ClientBundling.dll" />		
+      <Dependencies Include="$(CoreProjectDir)\Bin\Release\System.Web.Optimization.dll;$(CoreProjectDir)\Bin\Release\Microsoft.Web.Infrastructure.dll;;$(CoreProjectDir)\Bin\Release\WebGrease.dll;$(CoreProjectDir)\Bin\Release\Antlr3.Runtime.dll" />
+      
 			<PackageFile Include="$(MSBuildProjectDirectory)\Package.xml" />
 			<NuSpecFile Include="$(MSBuildProjectDirectory)\package.nuspec" />
       <TransFroms Include="$(MSBuildProjectDirectory)\nuget-transforms\*.*" />
       <ConfigFile Include="$(MSBuildProjectDirectory)\config\*.*" />
 		</ItemGroup>
-		<Copy SourceFiles="@(BinFiles)" DestinationFolder="$(BuildDir)\bin" />	
+		<Copy SourceFiles="@(BinFiles)" DestinationFolder="$(BuildDir)\bin" />
+    <Copy SourceFiles="@(Dependencies)" DestinationFolder="$(BuildDir)\bin" />
 		<Copy SourceFiles="@(PackageFile)" DestinationFolder="$(BuildDir)" />
 		<Copy SourceFiles="@(BinFiles)" DestinationFolder="$(BuildNuGetDir)\lib\net45" />		
 		<Copy SourceFiles="@(NuSpecFile)" DestinationFolder="$(BuildNuGetDir)" />
     <Copy SourceFiles="@(TransFroms)" DestinationFolder="$(BuildNuGetDir)\nuget-transforms\%(RecursiveDir)" />
     <Copy SourceFiles="@(ConfigFile)" DestinationFolder="$(BuildNuGetDir)\config\%(RecursiveDir)" />
+    <Copy SourceFiles="@(ConfigFile)" DestinationFolder="$(BuildDir)\config\%(RecursiveDir)" />
   </Target>
   
   <!-- MANIFEST -->
