@@ -77,6 +77,7 @@
 		<Copy SourceFiles="@(BinFiles)" DestinationFolder="$(BuildNuGetDir)\lib\net45" />		
 		<Copy SourceFiles="@(NuSpecFile)" DestinationFolder="$(BuildNuGetDir)" />
     <Copy SourceFiles="@(TransFroms)" DestinationFolder="$(BuildNuGetDir)\nuget-transforms\%(RecursiveDir)" />
+    <Copy SourceFiles="@(TransFroms)" DestinationFolder="$(BuildDir)\App_Plugins\BootEasyClientBundling\%(RecursiveDir)" />
     <Copy SourceFiles="@(ConfigFile)" DestinationFolder="$(BuildNuGetDir)\config\%(RecursiveDir)" />
     <Copy SourceFiles="@(ConfigFile)" DestinationFolder="$(BuildDir)\config\%(RecursiveDir)" />
   </Target>
