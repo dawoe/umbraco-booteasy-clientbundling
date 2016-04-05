@@ -1,6 +1,10 @@
 ﻿namespace Our.Umbraco.BootEasy.ClientBundling
 {
+    using System;
     using System.Web.Optimization;
+
+    using global::Umbraco.Core.Logging;
+    using global::Umbraco.Web;
 
     using Our.Umbraco.BootEasy.ClientBundling.Config;
 
@@ -25,8 +29,15 @@
         /// </summary>
         public override void Register()
         {
-            this.RegisterCssBundles();
-            this.RegisterScriptBundles();
+            try
+            {
+                this.RegisterCssBundles();
+                this.RegisterScriptBundles();
+            }
+            catch (Exception e)
+            {
+                LogHelper.Error<ClientBundlingRegistrar>("Error registering client side bundles", e);
+            }
         }
 
         /// <summary>

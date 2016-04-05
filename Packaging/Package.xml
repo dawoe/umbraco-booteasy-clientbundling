@@ -30,6 +30,7 @@ This package is addon for BootEasy which allows you to setup client bundling wit
 	<DataTypes />
   <Actions>
     <Action runat="install" undo="true" alias="BootEasyClientBundling.ConfigTransform" file="~/web.config" xdtfile="~/app_plugins/BootEasyClientBundling/web.config"></Action>
+    <Action runat="uninstall" undo="true" alias="BootEasyClientBundling.ConfigTransform" file="~/web.config" xdtfile="~/app_plugins/BootEasyClientBundling/web.config"></Action>
   </Actions>
 	<control />
 	<files />
