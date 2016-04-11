@@ -5,7 +5,7 @@
 			<name>Our.Umbraco.BootEasy.ClientBundling</name>
 			<version>0.0.0</version>
 			<license url="http://www.opensource.org/licenses/mit-license.php">MIT license</license>
-			<url>https://our.umbraco.org/projects/developer-tools/booteasy/</url>
+			<url>https://our.umbraco.org/projects/developer-tools/booteasy-clientbundling/</url>
 			<requirements>
 				<major>0</major>
 				<minor>0</minor>
