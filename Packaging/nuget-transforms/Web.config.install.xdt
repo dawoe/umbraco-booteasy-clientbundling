@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <configSections>
+    <section name="BootEasyClientBundling" restartOnExternalChanges="true" requirePermission="false" type="Our.Umbraco.BootEasy.ClientBundling.Config.ClientBundlingSection, Our.Umbraco.BootEasy.ClientBundling" xdt:Locator="Match(name)"
+            xdt:Transform="InsertIfMissing" />
+  </configSections>
+
+  <BootEasyClientBundling configSource="config\BootEasyClientBundling.config" xdt:Transform="InsertIfMissing" />
+</configuration>  
