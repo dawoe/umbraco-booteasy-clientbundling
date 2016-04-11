@@ -10,6 +10,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{9324E1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Our.Umbraco.BootEasy.ClientBundling", "Our.Umbraco.BootEasy.ClientBundling\Our.Umbraco.BootEasy.ClientBundling.csproj", "{F575D3A9-BEB2-4DF3-8E6D-5A838B6FF1B9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Packaging", "Packaging", "{FF14E316-ABF6-4354-82BF-E8CCAC6ACE83}"
+	ProjectSection(SolutionItems) = preProject
+		..\Packaging\build.bat = ..\Packaging\build.bat
+		..\Packaging\build.xml = ..\Packaging\build.xml
+		..\Packaging\package.nuspec = ..\Packaging\package.nuspec
+		..\Packaging\Package.xml = ..\Packaging\Package.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{CAF57096-693A-4AC8-A53E-2C2A7E0A8D01}"
+	ProjectSection(SolutionItems) = preProject
+		..\Packaging\config\BootEasyClientBundling.config = ..\Packaging\config\BootEasyClientBundling.config
+		..\Packaging\nuget-transforms\Web.config.install.xdt = ..\Packaging\nuget-transforms\Web.config.install.xdt
+		..\Packaging\nuget-transforms\Web.config.uninstall.xdt = ..\Packaging\nuget-transforms\Web.config.uninstall.xdt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,5 +38,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CAF57096-693A-4AC8-A53E-2C2A7E0A8D01} = {FF14E316-ABF6-4354-82BF-E8CCAC6ACE83}
 	EndGlobalSection
 EndGlobal

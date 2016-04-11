@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<umbPackage>
+	<info>
+		<package>
+			<name>Our.Umbraco.BootEasy.ClientBundling</name>
+			<version>0.0.0</version>
+			<license url="http://www.opensource.org/licenses/mit-license.php">MIT license</license>
+			<url>https://our.umbraco.org/projects/developer-tools/booteasy/</url>
+			<requirements>
+				<major>0</major>
+				<minor>0</minor>
+				<patch>0</patch>
+			</requirements>
+		</package>
+		<author>
+			<name>Dave Woestenborghs</name>
+			<website>https://github.com/dawoe/umbraco-booteasy-clientbundling</website>
+		</author>
+		<readme>
+      <![CDATA[BootEasy is a small framework to help hooking in to the Umbraco startup events.
+This package is addon for BootEasy which allows you to setup client bundling without any coding. It is all done through the BootEasyClientBundling.config file in the config folder]]></readme>
+	</info>
+
+	<DocumentTypes />
+	<Templates />
+	<Stylesheets />
+	<Macros />
+	<DictionaryItems />
+	<Languages />
+	<DataTypes />
+  <Actions>
+    <Action runat="install" undo="true" alias="BootEasyClientBundling.ConfigTransform" file="~/web.config" xdtfile="~/app_plugins/BootEasyClientBundling/web.config"></Action>
+    <Action runat="uninstall" undo="true" alias="BootEasyClientBundling.ConfigTransform" file="~/web.config" xdtfile="~/app_plugins/BootEasyClientBundling/web.config"></Action>
+  </Actions>
+	<control />
+	<files />
+</umbPackage>
